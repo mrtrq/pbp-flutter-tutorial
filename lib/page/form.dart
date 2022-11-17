@@ -1,4 +1,5 @@
 import 'package:experiments/main.dart';
+import 'package:experiments/page/to_do_page.dart';
 import 'package:flutter/material.dart';
 
 class MyFormPage extends StatefulWidget {
@@ -192,6 +193,15 @@ class _MyFormPageState extends State<MyFormPage> {
                       });
                     },
                   ),
+                ),
+                ListTile(
+                  title: const Text('To Do'),
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context, 
+                      MaterialPageRoute(builder: (context) => const MyFormPage()),
+                    );
+                  },
                 ),
                 SwitchListTile(
                   title: const Text('Practice Mode'),
